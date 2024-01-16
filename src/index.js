@@ -54,7 +54,7 @@ const getNewCardPlayer = () => {
     scoreDOM[0].innerText = playerScore;
 
     const imgCarta = document.createElement('img');
-    imgCarta.src = `assets/cartas/${card}.png`
+    imgCarta.src = `./assets/cartas/${card}.png`
     imgCarta.classList.add('carta')
     playerCards.append(imgCarta)
 
@@ -89,7 +89,7 @@ const getNewCardCPU = () => {
         scoreDOM[1].innerText = CPUScore;
     
         const imgCarta = document.createElement('img');
-        imgCarta.src = `assets/cartas/${card}.png`
+        imgCarta.src = `./assets/cartas/${card}.png`
         imgCarta.classList.add('carta')
         cpuCards.append(imgCarta)
 }
@@ -100,7 +100,7 @@ const dealNewCards = () => {
         getNewCardPlayer();
     }
     getNewCardCPU();
-    imgCartaBack.src = `assets/cartas/grey_back.png`
+    imgCartaBack.src = `./assets/cartas/grey_back.png`
     imgCartaBack.classList.add('carta')
     cpuCards.append(imgCartaBack)
 }
@@ -131,7 +131,7 @@ requestBtn.addEventListener('click', () => {
     getNewCardPlayer();
     const getCardAudio = document.createElement("audio");
     getCardAudio.preload = "auto";
-    getCardAudio.src = "assets/sounds/click.mp3";
+    getCardAudio.src = "./assets/sounds/click.mp3";
     getCardAudio.play();
     getCardAudio.remove();
 })
